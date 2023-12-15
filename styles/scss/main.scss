@@ -1,0 +1,12 @@
+@use "media";
+
+@import "global";
+
+// Molecules
+@import "molecules/index";
+@import "molecules/header";
+@import "molecules/footer";
+
+// Atomic
+@import "atomic/card";
+@import "atomic/skeleton";

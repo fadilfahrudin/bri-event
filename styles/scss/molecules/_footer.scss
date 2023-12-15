@@ -1,0 +1,47 @@
+#bri {
+    footer {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 24px 0;
+        padding: 16px 66px;
+        background-color: $color-dark-100;
+        .license {
+            text-align: center;
+            color: $color-white;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 0 12px;
+            li {
+                a {
+                    text-decoration: none;
+                    i {
+                        width: 32px;
+                        height: 32px;
+                    }
+                    .ic-fb {
+                        content: url(../../assets/img/fb.png);
+                    }
+                    .ic-tw {
+                        content: url(../../assets/img/tw.png);
+                    }
+                    .ic-ig {
+                        content: url(../../assets/img/ig.png);
+                    }
+                    .ic-yt {
+                        content: url(../../assets/img/yt.png);
+                    }
+                    .ic-tt {
+                        content: url(../../assets/img/tt.png);
+                    }
+                }
+            }
+        }
+    }
+}

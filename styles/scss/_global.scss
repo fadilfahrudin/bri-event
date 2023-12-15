@@ -1,0 +1,71 @@
+@font-face {
+    font-family: Sen;
+    src: url("../../assets/fonts/Sen/static/Sen-Regular.ttf"), format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// Color Variables
+$color-white: #fff;
+$color-blue-gradient: linear-gradient(180deg, #0b76bc 0%, #1989c8 100%);
+$color-dark-blue-gradient: linear-gradient(116deg, #080087 1.65%, #0b0a16 137.56%);
+$color-dark: #181118;
+$color-dark-100: #1c1c1c;
+$color-gray: #f8f8f8;
+$color-blue: #0b76bc;
+$color-dark-blue: #080087;
+
+:root {
+    scroll-behavior: smooth;
+
+    // For Firefox
+    scrollbar-width: thin !important;
+    scrollbar-color: $color-blue $color-gray !important;
+
+    // For Chrome
+    &::-webkit-scrollbar {
+        width: 2px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $color-gray;
+        border-radius: 2px;
+    }
+}
+
+body {
+    background-color: $color-white;
+    font-family: Sen, sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-family: Sen, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+h2 {
+    font-family: Sen, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+}
+h3 {
+    font-family: Sen, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+p {
+    font-family: Sen, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@include media.xl {
+    .container {
+        max-width: 1366px;
+    }
+}
