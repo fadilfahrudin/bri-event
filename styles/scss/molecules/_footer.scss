@@ -1,9 +1,12 @@
 #bri {
     footer {
+        width: 100%;
         display: flex;
-        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        flex-direction: row;
         align-items: center;
-        gap: 24px 0;
+        justify-content: center;
+        gap: 24px;
         padding: 16px 66px;
         background-color: $color-dark-100;
         .license {
@@ -14,34 +17,51 @@
             font-weight: 400;
             line-height: normal;
         }
-        ul {
-            list-style: none;
-            display: flex;
-            gap: 0 12px;
-            li {
-                a {
-                    text-decoration: none;
-                    i {
-                        width: 32px;
-                        height: 32px;
-                    }
-                    .ic-fb {
-                        content: url(../../assets/img/fb.png);
-                    }
-                    .ic-tw {
-                        content: url(../../assets/img/tw.png);
-                    }
-                    .ic-ig {
-                        content: url(../../assets/img/ig.png);
-                    }
-                    .ic-yt {
-                        content: url(../../assets/img/yt.png);
-                    }
-                    .ic-tt {
-                        content: url(../../assets/img/tt.png);
+        .socmed {
+            ul {
+                list-style: none;
+                display: flex;
+                gap: 0 12px;
+                li {
+                    a {
+                        text-decoration: none;
+                        i {
+                            width: 32px;
+                            height: 32px;
+                        }
+                        .ic-fb {
+                            content: url(../../assets/img/fb.png);
+                        }
+                        .ic-tw {
+                            content: url(../../assets/img/tw.png);
+                        }
+                        .ic-ig {
+                            content: url(../../assets/img/ig.png);
+                        }
+                        .ic-yt {
+                            content: url(../../assets/img/yt.png);
+                        }
+                        .ic-tt {
+                            content: url(../../assets/img/tt.png);
+                        }
                     }
                 }
             }
+        }
+    }
+    @include media.md {
+        footer {
+            justify-content: space-between;
+        }
+    }
+    @include media.lg {
+        footer {
+            justify-content: space-between;
+        }
+    }
+    @include media.xl {
+        footer {
+            justify-content: space-between;
         }
     }
 }

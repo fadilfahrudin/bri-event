@@ -25,6 +25,7 @@ body {
   background-color: #fff;
   font-family: Sen, sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -125,6 +126,9 @@ p {
 }
 #bri .container main #brimo .mobile-element .herro-img img {
   aspect-ratio: 3/5;
+}
+#bri .container main #brimo .desktop-element {
+  display: none;
 }
 #bri .container main #qlola .wrapper-qlola {
   height: max-content;
@@ -327,6 +331,282 @@ p {
   border: 1px solid #fff;
 }
 @media (min-width: 1024px) and (max-width: 1365px) {
+  #bri .container {
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+  #bri .container main #brimo {
+    margin-top: 100px;
+    position: relative;
+    display: flex;
+    gap: 0 53px;
+    width: 100%;
+    height: auto;
+  }
+  #bri .container main #brimo::before {
+    position: absolute;
+    left: -200px;
+    content: "";
+    width: 100%;
+    height: 720px;
+    z-index: -2;
+    border-radius: 0px 0px 200px 0px;
+    background: linear-gradient(180deg, #0b76bc 0%, #1989c8 100%);
+  }
+  #bri .container main #brimo .wrapper-brimo {
+    position: relative;
+    width: 50%;
+    height: max-content;
+  }
+  #bri .container main #brimo .wrapper-brimo .body-content {
+    padding-top: 24px;
+    background: unset;
+  }
+  #bri .container main #brimo .wrapper-brimo .body-content .title-section,
+  #bri .container main #brimo .wrapper-brimo .body-content .description {
+    padding: 0 16px;
+    color: #fff;
+  }
+  #bri .container main #brimo .wrapper-brimo .body-content .title-section {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  #bri .container main #brimo .wrapper-brimo .body-content .description {
+    padding-top: 16px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+  }
+  #bri .container main #brimo .wrapper-brimo .iframe-wrapper {
+    width: 100%;
+    height: auto;
+  }
+  #bri .container main #brimo .wrapper-brimo .iframe-wrapper iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border: none;
+  }
+  #bri .container main #brimo .wrapper-brimo .desktop-element {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 0;
+    bottom: -5px;
+    margin: auto;
+    margin-top: 32px;
+    height: auto;
+    width: 100%;
+  }
+  #bri .container main #brimo .wrapper-brimo .desktop-element .get-app-wrapper {
+    position: relative;
+    margin-top: 32px;
+    display: flex;
+    justify-content: end;
+    gap: 0 32px;
+  }
+  #bri .container main #brimo .wrapper-brimo .desktop-element .get-app-wrapper .flex-get-app {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+  }
+  #bri .container main #brimo .wrapper-brimo .desktop-element .get-app-wrapper .flex-get-app .title-element {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+  }
+  #bri .container main #brimo .wrapper-brimo .desktop-element .get-app-wrapper .qrcode {
+    aspect-ratio: 1/1;
+  }
+  #bri .container main #brimo .wrapper-brimo .desktop-element .herro-img {
+    width: 310px;
+    height: 307px;
+  }
+  #bri .container main #brimo .wrapper-brimo .desktop-element .herro-img img {
+    aspect-ratio: 3/5;
+  }
+  #bri .container main #brimo .mobile-element {
+    display: none;
+    position: relative;
+    bottom: -5px;
+    margin: auto;
+    margin-top: 32px;
+    width: 244px;
+    height: auto;
+  }
+  #bri .container main #brimo .mobile-element .title-element {
+    color: #181118;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+  }
+  #bri .container main #brimo .mobile-element .get-app-wrapper {
+    margin-top: 32px;
+    display: flex;
+    gap: 0 32px;
+  }
+  #bri .container main #brimo .mobile-element .herro-img {
+    width: 222px;
+    height: 220px;
+  }
+  #bri .container main #brimo .mobile-element .herro-img img {
+    aspect-ratio: 3/5;
+  }
+  #bri .container main #qlola {
+    margin-top: 70px;
+    margin-bottom: 64px;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0 53px;
+    width: 100%;
+    height: auto;
+  }
+  #bri .container main #qlola::before {
+    position: absolute;
+    right: -200px;
+    content: "";
+    width: 100%;
+    height: 698px;
+    z-index: -2;
+    border-radius: 0px 0px 0px 200px;
+    background: linear-gradient(113deg, #0465b4 1.75%, #1573bb 47.37%, #308ac7 94.95%, #95dff2 150.22%);
+  }
+  #bri .container main #qlola .wrapper-qlola {
+    position: relative;
+    width: 50%;
+    height: max-content;
+  }
+  #bri .container main #qlola .wrapper-qlola .body-content {
+    padding-top: 24px;
+    background: unset;
+  }
+  #bri .container main #qlola .wrapper-qlola .body-content .title-section,
+  #bri .container main #qlola .wrapper-qlola .body-content .description {
+    padding: 0 16px;
+    color: #fff;
+  }
+  #bri .container main #qlola .wrapper-qlola .body-content .title-section {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  #bri .container main #qlola .wrapper-qlola .body-content .description {
+    padding-top: 16px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+  }
+  #bri .container main #qlola .wrapper-qlola .body-content .qlola-list {
+    list-style: none;
+    padding: 0 16px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px 0;
+  }
+  #bri .container main #qlola .wrapper-qlola .body-content .qlola-list li {
+    position: relative;
+    padding-left: 32px;
+    color: #fff;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+  }
+  #bri .container main #qlola .wrapper-qlola .body-content .qlola-list li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    background-image: url(../../assets/icon/check.png);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    aspect-ratio: 1/1;
+  }
+  #bri .container main #qlola .wrapper-qlola .iframe-wrapper {
+    width: 100%;
+    height: auto;
+  }
+  #bri .container main #qlola .wrapper-qlola .iframe-wrapper iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border: none;
+  }
+  #bri .container main #qlola .buat-akun-wrapper {
+    position: absolute;
+    bottom: 5px;
+    right: 1vw;
+    margin-top: 64px;
+    display: flex;
+    gap: 16px 0;
+    flex-direction: column;
+    align-items: end;
+    margin-bottom: 32px;
+  }
+  #bri .container main #qlola .buat-akun-wrapper label {
+    color: #181118;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+  }
+  #bri .container main #qlola .buat-akun-wrapper .btn-buat-akun {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: #f36f21;
+  }
+  #bri .container main #qlola .buat-akun-wrapper .btn-buat-akun .ic-call {
+    content: url(../../assets/icon/phone-call.png);
+  }
+  #bri .container main #wefo {
+    margin-bottom: 64px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 0 53px;
+    width: 100%;
+    height: auto;
+  }
+  #bri .container main #wefo::before {
+    position: absolute;
+    left: -200px;
+    content: "";
+    width: 100%;
+    height: 698px;
+    z-index: -2;
+    border-radius: 0px 0px 200px 0px;
+    background: var(--Linear, linear-gradient(116deg, #080087 1.65%, #0b0a16 137.56%));
+  }
+  #bri .container main #wefo .wrapper-wefo {
+    position: relative;
+    width: 45%;
+    height: max-content;
+  }
+  #bri .container main #wefo .wrapper-wefo .body-content {
+    background: unset;
+  }
   #bri .container main #wefo .wrapper-wefo .body-content .wefo-img-wrapper {
     display: flex;
     flex-direction: row;
@@ -336,8 +616,328 @@ p {
   }
   #bri .container main #wefo .wrapper-wefo .body-content .wefo-img-wrapper .bri-product {
     position: relative;
-    width: 343px;
-    height: 229px;
+    width: 230px;
+    height: 154px;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  #bri .container main #wefo .wrapper-wefo .body-content .wefo-img-wrapper .bri-product .title {
+    position: absolute;
+    left: 17px;
+    top: 8px;
+    color: #fff;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 36px */
+  }
+  #bri .container main #wefo .wrapper-wefo .body-content .wefo-img-wrapper .bri-product .sub-title {
+    position: absolute;
+    bottom: 17px;
+    left: 17px;
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+  }
+  #bri .container main #wefo .wrapper-wefo .body-content .wefo-img-wrapper .bri-product img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+  }
+}
+@media (min-width: 1366px) {
+  #bri .container {
+    width: 1166px;
+    display: block;
+    margin: auto;
+  }
+  #bri .container main #brimo {
+    position: relative;
+    display: flex;
+    gap: 0 53px;
+    width: 100%;
+    height: auto;
+  }
+  #bri .container main #brimo::before {
+    position: absolute;
+    left: -200px;
+    content: "";
+    width: 100%;
+    height: 720px;
+    z-index: -2;
+    border-radius: 0px 0px 200px 0px;
+    background: linear-gradient(180deg, #0b76bc 0%, #1989c8 100%);
+  }
+  #bri .container main #brimo .wrapper-brimo {
+    position: relative;
+    width: 50%;
+    height: max-content;
+  }
+  #bri .container main #brimo .wrapper-brimo .body-content {
+    padding-top: 24px;
+    background: unset;
+  }
+  #bri .container main #brimo .wrapper-brimo .body-content .title-section,
+  #bri .container main #brimo .wrapper-brimo .body-content .description {
+    padding: 0 16px;
+    color: #fff;
+  }
+  #bri .container main #brimo .wrapper-brimo .body-content .title-section {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  #bri .container main #brimo .wrapper-brimo .body-content .description {
+    padding-top: 16px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+  }
+  #bri .container main #brimo .wrapper-brimo .iframe-wrapper {
+    width: 100%;
+    height: auto;
+  }
+  #bri .container main #brimo .wrapper-brimo .iframe-wrapper iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border: none;
+  }
+  #bri .container main #brimo .wrapper-brimo .desktop-element {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 0;
+    bottom: -5px;
+    margin: auto;
+    margin-top: 32px;
+    height: auto;
+    width: 100%;
+  }
+  #bri .container main #brimo .wrapper-brimo .desktop-element .get-app-wrapper {
+    position: relative;
+    margin-top: 32px;
+    display: flex;
+    justify-content: end;
+    gap: 0 32px;
+  }
+  #bri .container main #brimo .wrapper-brimo .desktop-element .get-app-wrapper .flex-get-app {
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+  }
+  #bri .container main #brimo .wrapper-brimo .desktop-element .get-app-wrapper .flex-get-app .title-element {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+  }
+  #bri .container main #brimo .wrapper-brimo .desktop-element .get-app-wrapper .qrcode {
+    aspect-ratio: 1/1;
+  }
+  #bri .container main #brimo .wrapper-brimo .desktop-element .herro-img {
+    position: relative;
+    top: 20px;
+    left: -9vw;
+    width: 310px;
+    height: 307px;
+  }
+  #bri .container main #brimo .wrapper-brimo .desktop-element .herro-img img {
+    aspect-ratio: 3/5;
+  }
+  #bri .container main #brimo .mobile-element {
+    display: none;
+    position: relative;
+    bottom: -5px;
+    margin: auto;
+    margin-top: 32px;
+    width: 244px;
+    height: auto;
+  }
+  #bri .container main #brimo .mobile-element .title-element {
+    color: #181118;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+  }
+  #bri .container main #brimo .mobile-element .get-app-wrapper {
+    margin-top: 32px;
+    display: flex;
+    gap: 0 32px;
+  }
+  #bri .container main #brimo .mobile-element .herro-img {
+    width: 222px;
+    height: 220px;
+  }
+  #bri .container main #brimo .mobile-element .herro-img img {
+    aspect-ratio: 3/5;
+  }
+  #bri .container main #qlola {
+    margin-top: 70px;
+    margin-bottom: 64px;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0 53px;
+    width: 100%;
+    height: auto;
+  }
+  #bri .container main #qlola::before {
+    position: absolute;
+    right: -200px;
+    content: "";
+    width: 100%;
+    height: 698px;
+    z-index: -2;
+    border-radius: 0px 0px 0px 200px;
+    background: linear-gradient(113deg, #0465b4 1.75%, #1573bb 47.37%, #308ac7 94.95%, #95dff2 150.22%);
+  }
+  #bri .container main #qlola .wrapper-qlola {
+    position: relative;
+    width: 50%;
+    height: max-content;
+  }
+  #bri .container main #qlola .wrapper-qlola .body-content {
+    padding-top: 24px;
+    background: unset;
+  }
+  #bri .container main #qlola .wrapper-qlola .body-content .title-section,
+  #bri .container main #qlola .wrapper-qlola .body-content .description {
+    padding: 0 16px;
+    color: #fff;
+  }
+  #bri .container main #qlola .wrapper-qlola .body-content .title-section {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  #bri .container main #qlola .wrapper-qlola .body-content .description {
+    padding-top: 16px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+  }
+  #bri .container main #qlola .wrapper-qlola .body-content .qlola-list {
+    list-style: none;
+    padding: 0 16px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px 0;
+  }
+  #bri .container main #qlola .wrapper-qlola .body-content .qlola-list li {
+    position: relative;
+    padding-left: 32px;
+    color: #fff;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+  }
+  #bri .container main #qlola .wrapper-qlola .body-content .qlola-list li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    background-image: url(../../assets/icon/check.png);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    aspect-ratio: 1/1;
+  }
+  #bri .container main #qlola .wrapper-qlola .iframe-wrapper {
+    width: 100%;
+    height: auto;
+  }
+  #bri .container main #qlola .wrapper-qlola .iframe-wrapper iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border: none;
+  }
+  #bri .container main #qlola .buat-akun-wrapper {
+    position: absolute;
+    bottom: 20px;
+    margin-top: 64px;
+    display: flex;
+    gap: 16px 0;
+    flex-direction: column;
+    align-items: end;
+    margin-bottom: 32px;
+  }
+  #bri .container main #qlola .buat-akun-wrapper label {
+    color: #181118;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+  }
+  #bri .container main #qlola .buat-akun-wrapper .btn-buat-akun {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: #f36f21;
+  }
+  #bri .container main #qlola .buat-akun-wrapper .btn-buat-akun .ic-call {
+    content: url(../../assets/icon/phone-call.png);
+  }
+  #bri .container main #wefo {
+    margin-bottom: 64px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 0 53px;
+    width: 100%;
+    height: auto;
+  }
+  #bri .container main #wefo::before {
+    position: absolute;
+    left: -200px;
+    content: "";
+    width: 100%;
+    height: 698px;
+    z-index: -2;
+    border-radius: 0px 0px 200px 0px;
+    background: var(--Linear, linear-gradient(116deg, #080087 1.65%, #0b0a16 137.56%));
+  }
+  #bri .container main #wefo .wrapper-wefo {
+    position: relative;
+    width: 45%;
+    height: max-content;
+  }
+  #bri .container main #wefo .wrapper-wefo .body-content {
+    background: unset;
+  }
+  #bri .container main #wefo .wrapper-wefo .body-content .wefo-img-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0 20px;
+    padding: 0 16px;
+  }
+  #bri .container main #wefo .wrapper-wefo .body-content .wefo-img-wrapper .bri-product {
+    position: relative;
+    width: 230px;
+    height: 154px;
+    flex-shrink: 0;
     overflow: hidden;
   }
   #bri .container main #wefo .wrapper-wefo .body-content .wefo-img-wrapper .bri-product .title {
@@ -389,14 +989,26 @@ p {
   letter-spacing: 0.24px;
   text-transform: capitalize;
 }
-#bri .container header .header-title .header-bg {
+#bri .container header .header-title .header-bg-mobile {
   position: absolute;
   z-index: -1;
   width: 100%;
   left: 0;
   top: 0;
 }
-#bri .container header .header-title .header-bg img {
+#bri .container header .header-title .header-bg-mobile img {
+  object-fit: cover;
+  object-position: center top;
+}
+#bri .container header .header-title .header-bg-desktop {
+  display: none;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+#bri .container header .header-title .header-bg-desktop img {
   object-fit: cover;
   object-position: center top;
 }
@@ -421,6 +1033,9 @@ p {
   width: 125px;
   height: 47px;
 }
+#bri .container header .scroll-btn {
+  display: none;
+}
 #bri .container header ul {
   list-style: none;
 }
@@ -442,14 +1057,26 @@ p {
     letter-spacing: 0.24px;
     text-transform: capitalize;
   }
-  #bri .container header .header-title .header-bg {
+  #bri .container header .header-title .header-bg-mobile {
     position: absolute;
     z-index: -1;
     width: 100%;
     left: 0;
     top: 0;
   }
-  #bri .container header .header-title .header-bg img {
+  #bri .container header .header-title .header-bg-mobile img {
+    object-fit: cover;
+    object-position: center top;
+  }
+  #bri .container header .header-title .header-bg-desktop {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  #bri .container header .header-title .header-bg-desktop img {
     object-fit: cover;
     object-position: center top;
   }
@@ -474,6 +1101,96 @@ p {
     width: 301.007px;
     height: 113.911px;
   }
+  #bri .container header .scroll-btn {
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 48px;
+  }
+  #bri .container header .scroll-btn a {
+    display: block;
+  }
+  #bri .container header .scroll-btn a .ic-scroll-down {
+    content: url(../../assets/icon/scroll-buttom.png);
+  }
+  #bri .container header ul {
+    list-style: none;
+    display: flex;
+  }
+  #bri .container header ul .banner-section img {
+    aspect-ratio: 5/3;
+  }
+}
+@media (min-width: 1366px) {
+  #bri .container header .header-title {
+    width: max-content;
+    height: auto;
+    display: block;
+    margin: auto;
+    padding: 36px 0;
+    color: #181118;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+    letter-spacing: 0.24px;
+    text-transform: capitalize;
+  }
+  #bri .container header .header-title .header-bg-mobile {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  #bri .container header .header-title .header-bg-mobile img {
+    object-fit: cover;
+    object-position: center top;
+  }
+  #bri .container header .header-title .header-bg-desktop {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    left: 0;
+    top: -200px;
+  }
+  #bri .container header .header-title .header-bg-desktop img {
+    object-fit: cover;
+    object-position: center top;
+  }
+  #bri .container header .header-title .berbagi {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  #bri .container header .header-title .line {
+    width: 44px;
+    height: 1px;
+    background-color: #181118;
+  }
+  #bri .container header .header-title .solusi {
+    font-weight: 700;
+  }
+  #bri .container header .header-title .brand {
+    display: flex;
+    gap: 0 7px;
+  }
+  #bri .container header .header-title .brand img {
+    width: 301.007px;
+    height: 113.911px;
+  }
+  #bri .container header .scroll-btn {
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 48px;
+  }
+  #bri .container header .scroll-btn a {
+    display: block;
+  }
+  #bri .container header .scroll-btn a .ic-scroll-down {
+    content: url(../../assets/icon/scroll-buttom.png);
+  }
   #bri .container header ul {
     list-style: none;
     display: flex;
@@ -484,10 +1201,13 @@ p {
 }
 
 #bri footer {
+  width: 100%;
   display: flex;
-  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
-  gap: 24px 0;
+  justify-content: center;
+  gap: 24px;
   padding: 16px 66px;
   background-color: #1c1c1c;
 }
@@ -499,32 +1219,47 @@ p {
   font-weight: 400;
   line-height: normal;
 }
-#bri footer ul {
+#bri footer .socmed ul {
   list-style: none;
   display: flex;
   gap: 0 12px;
 }
-#bri footer ul li a {
+#bri footer .socmed ul li a {
   text-decoration: none;
 }
-#bri footer ul li a i {
+#bri footer .socmed ul li a i {
   width: 32px;
   height: 32px;
 }
-#bri footer ul li a .ic-fb {
+#bri footer .socmed ul li a .ic-fb {
   content: url(../../assets/img/fb.png);
 }
-#bri footer ul li a .ic-tw {
+#bri footer .socmed ul li a .ic-tw {
   content: url(../../assets/img/tw.png);
 }
-#bri footer ul li a .ic-ig {
+#bri footer .socmed ul li a .ic-ig {
   content: url(../../assets/img/ig.png);
 }
-#bri footer ul li a .ic-yt {
+#bri footer .socmed ul li a .ic-yt {
   content: url(../../assets/img/yt.png);
 }
-#bri footer ul li a .ic-tt {
+#bri footer .socmed ul li a .ic-tt {
   content: url(../../assets/img/tt.png);
+}
+@media (min-width: 712px) and (max-width: 1023px) {
+  #bri footer {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1365px) {
+  #bri footer {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1366px) {
+  #bri footer {
+    justify-content: space-between;
+  }
 }
 
 .wrapper-card {
@@ -641,7 +1376,14 @@ p {
   }
 }
 @media (min-width: 1024px) and (max-width: 1365px) {
+  .wrapper-card {
+    width: 50%;
+    border-radius: 20px;
+    background: #fff;
+    backdrop-filter: blur(2.5px);
+  }
   .wrapper-card .card-body {
+    width: 100%;
     flex-direction: unset;
     flex-wrap: wrap;
     align-items: unset;
@@ -649,9 +1391,9 @@ p {
     gap: 16px;
   }
   .wrapper-card .card-body .card {
-    flex-shrink: 1;
+    flex-shrink: 0;
     flex-grow: 1;
-    flex-basis: 277px;
+    flex-basis: 218px;
     height: auto;
     overflow: hidden;
   }
@@ -685,41 +1427,52 @@ p {
   }
 }
 @media (min-width: 1366px) {
-  .card {
-    width: 161px;
+  .wrapper-card {
+    width: 50%;
+    border-radius: 20px;
+    background: #fff;
+    backdrop-filter: blur(2.5px);
+  }
+  .wrapper-card .card-body {
+    width: 100%;
+    flex-direction: unset;
+    flex-wrap: wrap;
+    align-items: unset;
+    justify-items: center;
+    gap: 16px;
+  }
+  .wrapper-card .card-body .card {
     flex-shrink: 0;
     flex-grow: 1;
-    flex-basis: 161px;
+    flex-basis: 254px;
     height: auto;
     overflow: hidden;
   }
-  .card a {
-    text-decoration: none;
+  .wrapper-card .card-body .card a {
+    flex-direction: column;
+    gap: 16px 0;
   }
-  .card a .card-img {
-    position: relative;
-    width: 100%;
-    border-radius: 16px;
-    overflow: hidden;
-    margin-bottom: 8px;
-  }
-  .card a .card-img img {
+  .wrapper-card .card-body .card a .card-img {
     width: 100%;
     height: auto;
-    aspect-ratio: 4/3;
+  }
+  .wrapper-card .card-body .card a .card-img img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3/2;
     object-fit: cover;
     object-position: center center;
   }
-  .card a .card-title {
+  .wrapper-card .card-body .card a .card-title {
     display: -webkit-box;
-    height: 116px;
+    height: 66px;
     color: #181118;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: 160%;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     text-overflow: ellipsis;
     overflow: hidden;
   }

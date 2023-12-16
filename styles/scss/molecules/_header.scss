@@ -21,7 +21,19 @@
                 letter-spacing: 0.24px;
                 text-transform: capitalize;
 
-                .header-bg {
+                .header-bg-mobile {
+                    position: absolute;
+                    z-index: -1;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    img {
+                        object-fit: cover;
+                        object-position: center top;
+                    }
+                }
+                .header-bg-desktop {
+                    display: none;
                     position: absolute;
                     z-index: -1;
                     width: 100%;
@@ -55,6 +67,9 @@
                     }
                 }
             }
+            .scroll-btn {
+                display: none;
+            }
             ul {
                 list-style: none;
                 .banner-section {
@@ -81,7 +96,19 @@
                     letter-spacing: 0.24px;
                     text-transform: capitalize;
 
-                    .header-bg {
+                    .header-bg-mobile {
+                        position: absolute;
+                        z-index: -1;
+                        width: 100%;
+                        left: 0;
+                        top: 0;
+                        img {
+                            object-fit: cover;
+                            object-position: center top;
+                        }
+                    }
+                    .header-bg-desktop {
+                        display: none;
                         position: absolute;
                         z-index: -1;
                         width: 100%;
@@ -112,6 +139,102 @@
                         img {
                             width: 301.007px;
                             height: 113.911px;
+                        }
+                    }
+                }
+                .scroll-btn {
+                    display: flex;
+                    align-self: flex-end;
+                    margin-bottom: 48px;
+                    a {
+                        display: block;
+                        .ic-scroll-down {
+                            content: url(../../assets/icon/scroll-buttom.png);
+                        }
+                    }
+                }
+                ul {
+                    list-style: none;
+                    display: flex;
+                    .banner-section {
+                        img {
+                            aspect-ratio: 5/3;
+                        }
+                    }
+                }
+            }
+        }
+        @include media.xl {
+            header {
+                .header-title {
+                    width: max-content;
+                    height: auto;
+                    display: block;
+                    margin: auto;
+                    padding: 36px 0;
+                    color: $color-dark;
+                    font-size: 58px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%; /* 36px */
+                    letter-spacing: 0.24px;
+                    text-transform: capitalize;
+
+                    .header-bg-mobile {
+                        display: none;
+                        position: absolute;
+                        z-index: -1;
+                        width: 100%;
+                        left: 0;
+                        top: 0;
+                        img {
+                            object-fit: cover;
+                            object-position: center top;
+                        }
+                    }
+                    .header-bg-desktop {
+                        display: block;
+                        position: absolute;
+                        z-index: -1;
+                        width: 100%;
+                        left: 0;
+                        top: -200px;
+                        img {
+                            object-fit: cover;
+                            object-position: center top;
+                        }
+                    }
+
+                    .berbagi {
+                        display: flex;
+                        align-items: center;
+                        gap: 4px;
+                    }
+                    .line {
+                        width: 44px;
+                        height: 1px;
+                        background-color: $color-dark;
+                    }
+                    .solusi {
+                        font-weight: 700;
+                    }
+                    .brand {
+                        display: flex;
+                        gap: 0 7px;
+                        img {
+                            width: 301.007px;
+                            height: 113.911px;
+                        }
+                    }
+                }
+                .scroll-btn {
+                    display: flex;
+                    align-self: flex-end;
+                    margin-bottom: 48px;
+                    a {
+                        display: block;
+                        .ic-scroll-down {
+                            content: url(../../assets/icon/scroll-buttom.png);
                         }
                     }
                 }
