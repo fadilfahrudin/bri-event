@@ -23,4 +23,26 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     })
+    // Scrolldown
+    $(".scroll-btn a").on("mouseover", () => {
+
+        $(".scroll-text").animate({
+            width: "114px",
+            left: "-10"
+        }, {
+            duration: 1000
+        })
+    })
+    $(".scroll-btn a").on("mouseleave", () => {
+        $(".scroll-text").css("--width", "114px")
+        $(".scroll-text").animate({
+            width: "0px",
+            left: "5",
+        },
+            800, function () {
+                $(".scroll-text").css("--width", "0px")
+            }
+        )
+    })
+
 })

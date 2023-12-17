@@ -15,9 +15,11 @@ $color-blue-gradient: linear-gradient(180deg, #0b76bc 0%, #1989c8 100%);
 $color-dark-blue-gradient: linear-gradient(116deg, #080087 1.65%, #0b0a16 137.56%);
 $color-dark: #181118;
 $color-dark-100: #1c1c1c;
+$color-dark-25: #cac7c7;
 $color-gray: #f8f8f8;
 $color-blue: #0b76bc;
 $color-dark-blue: #080087;
+$color-orange: #f36f21;
 
 :root {
     scroll-behavior: smooth;
@@ -28,11 +30,12 @@ $color-dark-blue: #080087;
 
     // For Chrome
     &::-webkit-scrollbar {
-        width: 2px;
+        width: 4px;
+        background-color: $color-gray;
     }
     &::-webkit-scrollbar-thumb {
-        background-color: $color-gray;
-        border-radius: 2px;
+        background-color: $color-blue;
+        border-radius: 4px;
     }
 }
 
