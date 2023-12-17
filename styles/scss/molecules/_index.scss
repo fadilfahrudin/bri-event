@@ -75,6 +75,20 @@
                 }
             }
             #qlola {
+                position: relative;
+                &::before {
+                    position: absolute;
+                    width: 100vw;
+                    height: 100%;
+                    left: 50%;
+                    transform: translate(-50%);
+                    content: "";
+                    background-image: url(../../assets/img/pattren.png);
+                    background-position: bottom;
+                    background-repeat: no-repeat;
+                    background-size: 100% 50%;
+                    z-index: -3;
+                }
                 .wrapper-qlola {
                     height: max-content;
                     .body-content {
@@ -146,7 +160,7 @@
                     gap: 16px 0;
                     flex-direction: column;
                     align-items: center;
-                    margin-bottom: 32px;
+                    padding-bottom: 32px;
                     label {
                         color: $color-dark;
                         font-size: 16px;
@@ -301,7 +315,7 @@
                     gap: 0 53px;
                     width: 100%;
                     height: auto;
-                    &::before {
+                    &::after {
                         position: absolute;
                         left: -200px;
                         content: "";
@@ -432,6 +446,10 @@
                     width: 100%;
                     height: auto;
                     &::before {
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    &::after {
                         position: absolute;
                         right: -200px;
                         content: "";
@@ -516,7 +534,7 @@
                     }
                     .buat-akun-wrapper {
                         position: absolute;
-                        bottom: 5px;
+                        bottom: -10px;
                         right: 1vw;
                         margin-top: 64px;
                         display: flex;
@@ -756,6 +774,7 @@
                 #qlola {
                     margin-top: 70px;
                     margin-bottom: 64px;
+                    padding-bottom: 60px;
                     position: relative;
                     display: flex;
                     flex-direction: row-reverse;
@@ -763,6 +782,10 @@
                     width: 100%;
                     height: auto;
                     &::before {
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    &::after {
                         position: absolute;
                         right: -200px;
                         content: "";
@@ -885,7 +908,8 @@
                     gap: 0 53px;
                     width: 100%;
                     height: auto;
-                    &::before {
+
+                    &::after {
                         position: absolute;
                         left: -200px;
                         content: "";

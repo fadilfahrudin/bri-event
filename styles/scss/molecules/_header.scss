@@ -19,6 +19,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding-bottom: 32px;
 
             .header-title {
                 width: max-content;
@@ -82,6 +83,7 @@
             }
             .scroll-btn {
                 display: none;
+                cursor: pointer;
             }
             ul {
                 display: flex;
@@ -94,20 +96,25 @@
                 font-weight: 700;
                 line-height: normal;
                 .banner-section {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    width: 378px;
-                    height: 198px;
-                    padding: 24px;
-                    background: $color-white;
-                    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
-                    img {
-                        aspect-ratio: 5/3;
-                    }
-                    &:hover {
-                        border: 1px solid $color-orange;
+                    cursor: pointer;
+                    a {
+                        text-decoration: none;
+                        display: flex;
+                        gap: 24px 0;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 378px;
+                        height: 198px;
+                        padding: 24px;
+                        background: $color-white;
+                        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+                        img {
+                            aspect-ratio: 5/3;
+                        }
+                        &:hover {
+                            border: 1px solid $color-orange;
+                        }
                     }
                 }
             }
@@ -171,8 +178,18 @@
                 .scroll-btn {
                     display: flex;
                     align-self: flex-end;
+                    align-items: center;
                     margin-bottom: 48px;
+                    margin-right: 2vw;
                     .scroll-text {
+                        position: relative;
+                        display: flex;
+                        flex-shrink: 0;
+                        width: 0;
+                        left: var(--left, 0);
+                        right: var(--right, 0);
+                        height: 30px;
+                        overflow: hidden;
                         color: #000;
                         font-size: 20px;
                         font-style: normal;
@@ -180,6 +197,20 @@
                         line-height: 150%; /* 30px */
                         letter-spacing: 0.2px;
                         text-transform: capitalize;
+
+                        &::after {
+                            position: absolute;
+                            z-index: 2;
+                            content: "";
+                            width: var(--width, 0px);
+                            height: 30px;
+                            left: var(--left, 0);
+                            right: var(--right, 0);
+                            background-color: #f7fbff;
+                            // background-color: red;
+                            transition: all ease-in-out 0.8s;
+                            transition-delay: 0.1s;
+                        }
                     }
                     a {
                         display: block;
@@ -191,10 +222,16 @@
                 ul {
                     list-style: none;
                     flex-direction: row;
-
+                    width: 100%;
+                    padding-left: 2vw;
+                    padding-right: 2vw;
                     .banner-section {
-                        img {
-                            aspect-ratio: 5/3;
+                        width: calc(100% / 3);
+                        a {
+                            width: 100%;
+                            img {
+                                aspect-ratio: 5/3;
+                            }
                         }
                     }
                 }
@@ -304,7 +341,6 @@
                     .banner-section {
                         width: 378px;
                         height: 198px;
-                        padding: 24px;
                         img {
                             aspect-ratio: 5/3;
                         }
@@ -315,10 +351,28 @@
     }
 
     // Container section
+    @include media.sm {
+        .container {
+            &::before {
+                top: 0;
+                height: 54vw;
+                background-image: url(../../assets/img/element-mobile.png);
+            }
+        }
+    }
+    @include media.md {
+        .container {
+            &::before {
+                top: -50vh;
+                height: 54vw;
+                background-image: url(../../assets/img/element-mobile.png);
+            }
+        }
+    }
     @include media.lg {
         .container {
             &::before {
-                top: 7px;
+                top: 0;
                 height: 54vw;
                 background-image: url(../../assets/img/element-desktop.png);
             }
@@ -327,7 +381,7 @@
     @include media.xl {
         .container {
             &::before {
-                top: 7px;
+                top: 0;
                 height: 54vw;
                 background-image: url(../../assets/img/element-desktop.png);
             }

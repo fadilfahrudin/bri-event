@@ -131,6 +131,22 @@ p {
 #bri .container main #brimo .desktop-element {
   display: none;
 }
+#bri .container main #qlola {
+  position: relative;
+}
+#bri .container main #qlola::before {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%);
+  content: "";
+  background-image: url(../../assets/img/pattren.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  z-index: -3;
+}
 #bri .container main #qlola .wrapper-qlola {
   height: max-content;
 }
@@ -202,7 +218,7 @@ p {
   gap: 16px 0;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 32px;
+  padding-bottom: 32px;
 }
 #bri .container main #qlola .buat-akun-wrapper label {
   color: #181118;
@@ -351,7 +367,7 @@ p {
     width: 100%;
     height: auto;
   }
-  #bri .container main #brimo::before {
+  #bri .container main #brimo::after {
     position: absolute;
     left: -200px;
     content: "";
@@ -479,6 +495,10 @@ p {
     height: auto;
   }
   #bri .container main #qlola::before {
+    background-position: center;
+    background-size: cover;
+  }
+  #bri .container main #qlola::after {
     position: absolute;
     right: -200px;
     content: "";
@@ -557,7 +577,7 @@ p {
   }
   #bri .container main #qlola .buat-akun-wrapper {
     position: absolute;
-    bottom: 5px;
+    bottom: -10px;
     right: 1vw;
     margin-top: 64px;
     display: flex;
@@ -791,6 +811,7 @@ p {
   #bri .container main #qlola {
     margin-top: 70px;
     margin-bottom: 64px;
+    padding-bottom: 60px;
     position: relative;
     display: flex;
     flex-direction: row-reverse;
@@ -799,6 +820,10 @@ p {
     height: auto;
   }
   #bri .container main #qlola::before {
+    background-position: center;
+    background-size: cover;
+  }
+  #bri .container main #qlola::after {
     position: absolute;
     right: -200px;
     content: "";
@@ -915,7 +940,7 @@ p {
     width: 100%;
     height: auto;
   }
-  #bri .container main #wefo::before {
+  #bri .container main #wefo::after {
     position: absolute;
     left: -200px;
     content: "";
@@ -1000,6 +1025,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 32px;
 }
 #bri .container header .header-title {
   width: max-content;
@@ -1061,6 +1087,7 @@ p {
 }
 #bri .container header .scroll-btn {
   display: none;
+  cursor: pointer;
 }
 #bri .container header ul {
   display: flex;
@@ -1074,7 +1101,12 @@ p {
   line-height: normal;
 }
 #bri .container header ul .banner-section {
+  cursor: pointer;
+}
+#bri .container header ul .banner-section a {
+  text-decoration: none;
   display: flex;
+  gap: 24px 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -1084,10 +1116,10 @@ p {
   background: #fff;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
 }
-#bri .container header ul .banner-section img {
+#bri .container header ul .banner-section a img {
   aspect-ratio: 5/3;
 }
-#bri .container header ul .banner-section:hover {
+#bri .container header ul .banner-section a:hover {
   border: 1px solid #f36f21;
 }
 @media (min-width: 1024px) and (max-width: 1365px) {
@@ -1147,9 +1179,19 @@ p {
   #bri .container header .scroll-btn {
     display: flex;
     align-self: flex-end;
+    align-items: center;
     margin-bottom: 48px;
+    margin-right: 2vw;
   }
   #bri .container header .scroll-btn .scroll-text {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    width: 0;
+    left: var(--left, 0);
+    right: var(--right, 0);
+    height: 30px;
+    overflow: hidden;
     color: #000;
     font-size: 20px;
     font-style: normal;
@@ -1157,6 +1199,18 @@ p {
     line-height: 150%; /* 30px */
     letter-spacing: 0.2px;
     text-transform: capitalize;
+  }
+  #bri .container header .scroll-btn .scroll-text::after {
+    position: absolute;
+    z-index: 2;
+    content: "";
+    width: var(--width, 0px);
+    height: 30px;
+    left: var(--left, 0);
+    right: var(--right, 0);
+    background-color: #f7fbff;
+    transition: all ease-in-out 0.8s;
+    transition-delay: 0.1s;
   }
   #bri .container header .scroll-btn a {
     display: block;
@@ -1167,8 +1221,17 @@ p {
   #bri .container header ul {
     list-style: none;
     flex-direction: row;
+    width: 100%;
+    padding-left: 2vw;
+    padding-right: 2vw;
   }
-  #bri .container header ul .banner-section img {
+  #bri .container header ul .banner-section {
+    width: 33.3333333333%;
+  }
+  #bri .container header ul .banner-section a {
+    width: 100%;
+  }
+  #bri .container header ul .banner-section a img {
     aspect-ratio: 5/3;
   }
 }
@@ -1274,22 +1337,35 @@ p {
   #bri .container header ul .banner-section {
     width: 378px;
     height: 198px;
-    padding: 24px;
   }
   #bri .container header ul .banner-section img {
     aspect-ratio: 5/3;
   }
 }
+@media (min-width: 376px) and (max-width: 712px) {
+  #bri .container::before {
+    top: 0;
+    height: 54vw;
+    background-image: url(../../assets/img/element-mobile.png);
+  }
+}
+@media (min-width: 713px) and (max-width: 1023px) {
+  #bri .container::before {
+    top: -50vh;
+    height: 54vw;
+    background-image: url(../../assets/img/element-mobile.png);
+  }
+}
 @media (min-width: 1024px) and (max-width: 1365px) {
   #bri .container::before {
-    top: 7px;
+    top: 0;
     height: 54vw;
     background-image: url(../../assets/img/element-desktop.png);
   }
 }
 @media (min-width: 1366px) {
   #bri .container::before {
-    top: 7px;
+    top: 0;
     height: 54vw;
     background-image: url(../../assets/img/element-desktop.png);
   }
@@ -1341,7 +1417,7 @@ p {
 #bri footer .socmed ul li a .ic-tt {
   content: url(../../assets/img/tt.png);
 }
-@media (min-width: 712px) and (max-width: 1023px) {
+@media (min-width: 713px) and (max-width: 1023px) {
   #bri footer {
     justify-content: space-between;
   }
@@ -1358,10 +1434,12 @@ p {
 }
 
 .wrapper-card {
-  margin-top: 32px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #fff;
 }
 .wrapper-card .card-body {
   width: 100%;
@@ -1442,7 +1520,7 @@ p {
   background-color: #080087;
 }
 
-@media (min-width: 712px) and (max-width: 1023px) {
+@media (min-width: 713px) and (max-width: 1023px) {
   .wrapper-card .card-body {
     flex-direction: unset;
     flex-wrap: wrap;
@@ -1488,10 +1566,13 @@ p {
 }
 @media (min-width: 1024px) and (max-width: 1365px) {
   .wrapper-card {
+    margin-top: 32px;
     width: 50%;
     border-radius: 20px;
     background: #fff;
     backdrop-filter: blur(2.5px);
+    padding-bottom: 20px;
+    padding-top: 0;
   }
   .wrapper-card .card-body {
     width: 100%;
@@ -1504,7 +1585,7 @@ p {
   .wrapper-card .card-body .card {
     flex-shrink: 0;
     flex-grow: 1;
-    flex-basis: 218px;
+    flex-basis: 216px;
     height: auto;
     overflow: hidden;
   }
@@ -1539,10 +1620,13 @@ p {
 }
 @media (min-width: 1366px) {
   .wrapper-card {
+    margin-top: 32px;
     width: 50%;
     border-radius: 20px;
     background: #fff;
     backdrop-filter: blur(2.5px);
+    padding-bottom: 20px;
+    padding-top: 0;
   }
   .wrapper-card .card-body {
     width: 100%;

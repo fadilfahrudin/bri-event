@@ -5,25 +5,32 @@ document.addEventListener("DOMContentLoaded", function () {
         item.classList.remove("loading");
     })
     // Navigation
-    $('ul li a').each(function (i, nav) {
+    $('header ul li a').each(function (i, nav) {
         $(nav).click(() => {
             let target = $(this).attr('target')
             let to = $(target)
-            $(".active").each(function (i, item) {
-                item.classList.remove("active");
-            })
-            $(nav).addClass('active')
-
             if (to.length > 0) {
                 window.scrollTo({
-                    top: to.offset().top - 65,
+                    top: to.offset().top,
                     left: 0,
                     behavior: 'smooth'
                 })
             }
         })
     })
-    // Scrolldown
+    $("#scroll-down").click(() => {
+        let target = $("#scroll-down").attr('target')
+        let to = $(target)
+        if (to.length > 0) {
+            window.scrollTo({
+                top: to.offset().top - 50,
+                left: 0,
+                behavior: 'smooth'
+            })
+        }
+    })
+
+    // Scrolldown Animation Hover
     $(".scroll-btn a").on("mouseover", () => {
 
         $(".scroll-text").animate({
