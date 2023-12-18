@@ -93,7 +93,7 @@ p {
   font-weight: 700;
   line-height: normal;
 }
-#bri nav #nav-section .nav-section.active::before {
+#bri nav #nav-section .nav-section a.active::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -103,7 +103,7 @@ p {
   height: 2px;
   background-color: #f36f21;
 }
-#bri nav #nav-section .nav-section::before {
+#bri nav #nav-section .nav-section a::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -114,7 +114,7 @@ p {
   background-color: #f36f21;
   transition: all 0.5s ease-in-out;
 }
-#bri nav #nav-section .nav-section:hover::before {
+#bri nav #nav-section .nav-section a:hover::before {
   width: 15px;
 }
 @media (min-width: 1024px) and (max-width: 1365px) {
