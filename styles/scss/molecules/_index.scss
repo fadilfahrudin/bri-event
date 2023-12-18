@@ -571,7 +571,7 @@
                     gap: 0 53px;
                     width: 100%;
                     height: auto;
-                    &::before {
+                    &::after {
                         position: absolute;
                         left: -200px;
                         content: "";

@@ -686,7 +686,7 @@ p {
     width: 100%;
     height: auto;
   }
-  #bri .container main #wefo::before {
+  #bri .container main #wefo::after {
     position: absolute;
     left: -200px;
     content: "";
@@ -1136,6 +1136,7 @@ p {
 #bri .container header .header-title .berbagi {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 4px;
 }
 #bri .container header .header-title .line {
