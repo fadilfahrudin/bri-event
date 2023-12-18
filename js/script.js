@@ -5,6 +5,17 @@ document.addEventListener("DOMContentLoaded", function () {
         item.classList.remove("loading");
     })
     // Navigation
+    $(window).on("scroll", () => {
+        // console.log(window.scrollY)
+        if (window.scrollY < 750) {
+            $("nav").css("opacity", "0")
+        } else {
+            $("nav").css("opacity", "1")
+
+        }
+    })
+
+
     $('header ul li a').each(function (i, nav) {
         $(nav).click(() => {
             let target = $(this).attr('target')

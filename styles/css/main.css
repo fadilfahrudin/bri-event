@@ -59,10 +59,90 @@ p {
     max-width: 1366px;
   }
 }
+#bri nav {
+  transition: opacity ease-in-out 0.3s;
+  opacity: 0;
+  position: sticky;
+  top: -1px;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 24px 2vw;
+  background: #fff;
+  box-shadow: 0px 2px 29px 0px rgba(0, 0, 0, 0.13);
+}
+#bri nav #nav-section {
+  list-style: none;
+  display: flex;
+  gap: 0 42px;
+}
+#bri nav #nav-section .nav-section {
+  position: relative;
+  padding-bottom: 9px;
+}
+#bri nav #nav-section .nav-section a {
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+#bri nav #nav-section .nav-section.active::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+  width: 15px;
+  height: 2px;
+  background-color: #f36f21;
+}
+#bri nav #nav-section .nav-section::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #f36f21;
+  transition: all 0.5s ease-in-out;
+}
+#bri nav #nav-section .nav-section:hover::before {
+  width: 15px;
+}
+@media (min-width: 1024px) and (max-width: 1365px) {
+  #bri nav {
+    padding: 24px 100px;
+  }
+}
+@media (min-width: 1366px) {
+  #bri nav {
+    padding: 24px 100px;
+  }
+}
+
 #bri .container main #brimo {
   position: relative;
   width: 100%;
   height: auto;
+  padding-bottom: 40px;
+}
+#bri .container main #brimo::before {
+  position: absolute;
+  z-index: -4;
+  content: "";
+  background-color: #f8f8f8;
+  width: 100vw;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%);
 }
 #bri .container main #brimo .wrapper-brimo {
   height: max-content;
@@ -102,7 +182,7 @@ p {
 }
 #bri .container main #brimo .mobile-element {
   position: relative;
-  bottom: -5px;
+  bottom: -44px;
   margin: auto;
   margin-top: 32px;
   width: 244px;
@@ -144,8 +224,8 @@ p {
   background-image: url(../../assets/img/pattren.png);
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 100% 50%;
   z-index: -3;
+  background-color: #f8f8f8;
 }
 #bri .container main #qlola .wrapper-qlola {
   height: max-content;
@@ -241,6 +321,21 @@ p {
 #bri .container main #qlola .buat-akun-wrapper .btn-buat-akun .ic-call {
   content: url(../../assets/icon/phone-call.png);
 }
+#bri .container main #wefo {
+  width: 100%;
+  height: auto;
+  padding-bottom: 40px;
+}
+#bri .container main #wefo::before {
+  position: absolute;
+  z-index: -3;
+  content: "";
+  background-color: #f8f8f8;
+  width: 100vw;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%);
+}
 #bri .container main #wefo .wrapper-wefo {
   height: max-content;
 }
@@ -315,7 +410,7 @@ p {
   left: 17px;
   top: 8px;
   color: #fff;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 150%; /* 36px */
@@ -449,40 +544,16 @@ p {
     aspect-ratio: 1/1;
   }
   #bri .container main #brimo .wrapper-brimo .desktop-element .herro-img {
-    width: 310px;
-    height: 307px;
+    position: relative;
+    bottom: -43px;
+    width: 226px;
+    height: auto;
   }
   #bri .container main #brimo .wrapper-brimo .desktop-element .herro-img img {
-    aspect-ratio: 3/5;
+    aspect-ratio: 1/1;
   }
   #bri .container main #brimo .mobile-element {
     display: none;
-    position: relative;
-    bottom: -5px;
-    margin: auto;
-    margin-top: 32px;
-    width: 244px;
-    height: auto;
-  }
-  #bri .container main #brimo .mobile-element .title-element {
-    color: #181118;
-    text-align: center;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 24px */
-  }
-  #bri .container main #brimo .mobile-element .get-app-wrapper {
-    margin-top: 32px;
-    display: flex;
-    gap: 0 32px;
-  }
-  #bri .container main #brimo .mobile-element .herro-img {
-    width: 222px;
-    height: 220px;
-  }
-  #bri .container main #brimo .mobile-element .herro-img img {
-    aspect-ratio: 3/5;
   }
   #bri .container main #qlola {
     margin-top: 70px;
@@ -608,7 +679,6 @@ p {
     content: url(../../assets/icon/phone-call.png);
   }
   #bri .container main #wefo {
-    margin-bottom: 64px;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -653,7 +723,7 @@ p {
     left: 17px;
     top: 8px;
     color: #fff;
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: 150%; /* 36px */
@@ -688,7 +758,7 @@ p {
     width: 100%;
     height: auto;
   }
-  #bri .container main #brimo::before {
+  #bri .container main #brimo::after {
     position: absolute;
     left: -200px;
     content: "";
@@ -771,13 +841,13 @@ p {
   }
   #bri .container main #brimo .wrapper-brimo .desktop-element .herro-img {
     position: relative;
-    top: 20px;
+    bottom: -40px;
     left: -9vw;
-    width: 310px;
-    height: 307px;
+    width: 226px;
+    height: auto;
   }
   #bri .container main #brimo .wrapper-brimo .desktop-element .herro-img img {
-    aspect-ratio: 3/5;
+    aspect-ratio: 1/1;
   }
   #bri .container main #brimo .mobile-element {
     display: none;
@@ -932,7 +1002,6 @@ p {
     content: url(../../assets/icon/phone-call.png);
   }
   #bri .container main #wefo {
-    margin-bottom: 64px;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -977,7 +1046,7 @@ p {
     left: 17px;
     top: 8px;
     color: #fff;
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: 150%; /* 36px */
@@ -1091,6 +1160,8 @@ p {
 }
 #bri .container header ul {
   display: flex;
+  width: 100%;
+  padding: 0 5vw;
   flex-direction: column;
   gap: 16px;
   list-style: none;
@@ -1102,6 +1173,7 @@ p {
 }
 #bri .container header ul .banner-section {
   cursor: pointer;
+  width: 100%;
 }
 #bri .container header ul .banner-section a {
   text-decoration: none;
@@ -1110,17 +1182,19 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 378px;
+  width: 100%;
   height: 198px;
   padding: 24px;
   background: #fff;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
 }
-#bri .container header ul .banner-section a img {
-  aspect-ratio: 5/3;
-}
 #bri .container header ul .banner-section a:hover {
   border: 1px solid #f36f21;
+}
+@media (min-width: 713px) and (max-width: 1023px) {
+  #bri .container header ul {
+    padding: 0 20vw;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1365px) {
   #bri .container header {
@@ -1222,17 +1296,13 @@ p {
     list-style: none;
     flex-direction: row;
     width: 100%;
-    padding-left: 2vw;
-    padding-right: 2vw;
+    padding: 0 8vw;
   }
   #bri .container header ul .banner-section {
     width: 33.3333333333%;
   }
   #bri .container header ul .banner-section a {
     width: 100%;
-  }
-  #bri .container header ul .banner-section a img {
-    aspect-ratio: 5/3;
   }
 }
 @media (min-width: 1366px) {
@@ -1333,13 +1403,15 @@ p {
   #bri .container header ul {
     list-style: none;
     flex-direction: row;
+    width: 100%;
+    padding: 0;
   }
   #bri .container header ul .banner-section {
-    width: 378px;
+    width: 33.3333333333%;
     height: 198px;
   }
-  #bri .container header ul .banner-section img {
-    aspect-ratio: 5/3;
+  #bri .container header ul .banner-section a {
+    width: 100%;
   }
 }
 @media (min-width: 376px) and (max-width: 712px) {
@@ -1439,7 +1511,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #fff;
+  background-color: #fff;
 }
 .wrapper-card .card-body {
   width: 100%;
