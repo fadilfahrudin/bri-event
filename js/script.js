@@ -37,6 +37,16 @@ document.addEventListener("DOMContentLoaded", function () {
         $(nav).click(() => {
             let target = $(this).attr('target')
             let to = $(target)
+            $('#nav-section .nav-section a').each(function (i, navI) {
+                let targetNav = $(this).attr('target')
+                if (target == targetNav) {
+                    $(".active").each(function (i, item) {
+                        item.classList.remove("active");
+                    })
+                    $(navI).addClass('active')
+                }
+            })
+
             if (to.length > 0) {
                 window.scrollTo({
                     top: to.offset().top - 80,
