@@ -4,18 +4,46 @@ document.addEventListener("DOMContentLoaded", function () {
     $(".loading").each(function (i, item) {
         item.classList.remove("loading");
     })
-    // Navigation
-    $(window).on("scroll", () => {
-        // console.log(window.scrollY)
+
+    // Move active state event scroll at section position
+    $(window).on("scroll", function (e) {
+        $("section").each(function (i, item) {
+            let height = parseInt($(item).css("height"));
+
+            $(item).filter(function (i, el) {
+                if (el.getBoundingClientRect().bottom <= height + 500) {
+                    let target = $(item).attr("id");
+                    $('#nav-section .nav-section a').each(function (i, navI) {
+                        let targetNav = $(this).attr('target')
+                        let targetNew = targetNav.slice(0, 0) + targetNav.slice(1)
+                        if (target == targetNew) {
+                            $(".active").each(function (i, item) {
+                                item.classList.remove("active");
+                            })
+                            $(navI).addClass('active')
+                        }
+                    })
+                }
+            })
+        });
+
+
+
+
+    }).scroll();
+
+    // Show hide nav event scroll at top point
+    $(window).on("scroll", (e) => {
         if (window.scrollY < 750) {
+            $("nav").css("top", "-200px")
             $("nav").css("opacity", "0")
         } else {
             $("nav").css("opacity", "1")
-
+            $("nav").css("top", "-1px")
         }
     })
 
-
+    // Move active state event click nav
     $('#nav-section .nav-section a').each(function (i, nav) {
         $(nav).click(() => {
             let target = $(this).attr('target')
@@ -33,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     })
+    // Move active state event click banner section
     $('header ul li a').each(function (i, nav) {
         $(nav).click(() => {
             let target = $(this).attr('target')
@@ -56,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     })
+    // Scrolldown on click
     $("#scroll-down").click(() => {
         let target = $("#scroll-down").attr('target')
         let to = $(target)
@@ -68,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     })
 
-    // Scrolldown Animation Hover
+    // Scrolldown Animation on Hover
     $(".scroll-btn a").on("mouseover", () => {
 
         $(".scroll-text").animate({
