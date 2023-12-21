@@ -8,9 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Move active state event scroll at section position
     $(window).on("scroll", function (e) {
         $("section").each(function (i, item) {
+            // get height content section
             let height = parseInt($(item).css("height"));
 
+            // Make filter
             $(item).filter(function (i, el) {
+                // match height section and scroll height at section
                 if (el.getBoundingClientRect().bottom <= height + 500) {
                     let target = $(item).attr("id");
                     $('#nav-section .nav-section a').each(function (i, navI) {
